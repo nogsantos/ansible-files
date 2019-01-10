@@ -1,5 +1,5 @@
 [wordpress]
-35.202.128.84
+# set-host-address
 
 # This is the default ansible 'hosts' file.
 #
