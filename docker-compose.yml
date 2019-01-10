@@ -2,7 +2,7 @@ version: "3.2"
 services:
   ansible:
     container_name: ansible
-    build: .
+    image: nogsantos/ansible
     stdin_open: true
     tty: true
     volumes:
