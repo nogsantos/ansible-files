@@ -1,6 +1,14 @@
 # Ansible files
 
-Roles files is for ubuntu
+This project has a Worpress setup as example
+
+##### Roles
+- Mysql
+- Php
+- Server Apache2 reverse proxy
+- Worpress
+
+> Default roles files is for ubuntu.
 
 ## Premisses
 
@@ -34,6 +42,8 @@ $ docker attach ansible
 In container Ansible work dir is `/etc/ansible`
 
 ## Generate the keys
+
+Ssh keys must be generated and hosted in `keys` dir.
 
 ### Generate ssh keys
 
