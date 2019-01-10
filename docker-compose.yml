@@ -1,0 +1,25 @@
+version: "3.2"
+services:
+  ansible:
+    container_name: ansible
+    build: .
+    stdin_open: true
+    tty: true
+    volumes:
+      - type: bind
+        source: ./ansible/keys
+        target: /etc/ansible/keys
+      - type: bind
+        source: ./ansible/playbooks
+        target: /etc/ansible/playbooks
+      - type: bind
+        source: ./ansible/roles
+        target: /etc/ansible/roles
+      - type: bind
+        source: ./ansible/ansible.cfg
+        target: /etc/ansible/ansible.cfg
+      - type: bind
+        source: ./ansible/hosts
+        target: /etc/ansible/hosts
+volumes:
+  files: {}

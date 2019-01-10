@@ -1,0 +1,12 @@
+---
+# tasks file for php
+
+- name: Instalando php extensions
+  apt: name={{ packages }} state=present
+  become: yes
+  vars:
+    packages:
+    - php7.2-gd
+    - php7.2
+    - php7.2-mbstring
+    - php7.2-xml

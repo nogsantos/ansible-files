@@ -1,0 +1,19 @@
+---
+# tasks file for server
+- name: Fazendo update do apt
+  apt: update_cache=yes cache_valid_time=3600
+  become: yes
+- name: Add ppa Repository
+  apt_repository: repo=ppa:ondrej/php  
+  become: yes
+- name: Instalando as dependencias
+  apt: name={{ packages }} state=present
+  become: yes
+  vars:
+    packages:
+    - apache2
+    - mysql-server
+    - php7.2-mysql
+    - php7.2
+    - libapache2-mod-php7.2
+    - python-mysqldb
