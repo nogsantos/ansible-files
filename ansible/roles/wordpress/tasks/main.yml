@@ -11,13 +11,14 @@
   unarchive: src=/tmp/wordpress.tar.gz dest=/var/www copy=no
   become: yes
 
-- name: Alterando conf do apache
+- name: Alterando configuracao do apache
   lineinfile:
     dest=/etc/apache2/sites-enabled/000-default.conf
     regexp="(.)+DocumentRoot /var/www/html"
     line="DocumentRoot /var/www/wordpress"
   notify:
     - restart apache
+  become: yes
 
 - name: Criando arquivo de configuracao padrao
   command: mv /var/www/wordpress/wp-config-sample.php /var/www/wordpress/wp-config.php creates=/var/www/wordpress/wp-config.php
