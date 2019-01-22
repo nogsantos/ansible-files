@@ -1,14 +1,6 @@
 # Ansible files
 
-This project has a Worpress setup as example
-
-##### Roles
-- Mysql
-- Php
-- Server Apache2 reverse proxy
-- Worpress
-
-> Default roles files is for ubuntu.
+Docker container to provisioning with ansible. Enables to create and edit files on host and run ansible commands on container.
 
 ## Premisses
 
@@ -56,3 +48,37 @@ $ ssh-keygen -t rsa -b 4096 -f [key-name] -C [user]
 ```bash
 $ ssh -i [key-name] [user]@[host-address]
 ```
+
+<details>
+<summary>Worpress Playbook installation setup</summary>
+
+### Roles
+
+- Mysql
+- Php
+- Server Apache2 reverse proxy
+- Worpress
+
+Installations is for `Ubuntu 18.04 LTS` and `python 2` it's a pre-requisite for ansible.
+
+### Install python 2 on ubuntu
+
+Update
+
+```bash
+$ sudo apt update -y
+```
+
+Install
+
+```bash
+$ sudo apt install python-pip -y
+```
+
+To check after install
+
+```bash
+$ pip --version
+```
+
+</details>
