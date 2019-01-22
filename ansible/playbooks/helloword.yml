@@ -1,0 +1,5 @@
+---
+- hosts: glcoud
+  name: 'Just creating a file'
+  tasks:
+    - shell: 'echo hello > ~/HELLO-WORD'
