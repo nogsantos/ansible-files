@@ -1,8 +1,10 @@
 ---
 # tasks file for php
 
-- name: Instalando php extensions
-  apt: name={{ packages }} state=present
+- name: 'Installing the php-7 dependencies'
+  apt:
+    name: "{{ packages }}"
+    state: present
   become: yes
   vars:
     packages:

@@ -1,11 +1,13 @@
 ---
 # tasks file for mysql
-- name: Criando a base de dados Mysql
-  mysql_db: name={{ wp_mysql_db }} state=present
+- name: 'Creating MySQL database'
+  mysql_db:
+    name: "{{ wp_mysql_db }}"
+    state: present
   become: yes
-- name: Criando o usuario do mysql
+- name: 'Criating MySQL user'
   mysql_user:
-    name={{ wp_mysql_user }}
-    password={{ wp_mysql_password }}
-    priv=*.*:ALL
+    name: "{{ wp_mysql_user }}"
+    password: "{{ wp_mysql_password }}"
+    priv: "*.*:ALL"
   become: yes
