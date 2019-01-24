@@ -1,5 +1,11 @@
 [wordpress]
-# [host-ip]
+104.197.247.54
+
+[glcoud]
+35.199.72.22 ansible_user=nogsantos
+
+# To config the host with an user and a key
+# [host-ip] ansible_user=[user] ansible_ssh_private_key_file=[relative-path-to-the-key]
 
 # This is the default ansible 'hosts' file.
 #
