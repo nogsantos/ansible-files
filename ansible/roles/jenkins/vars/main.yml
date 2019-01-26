@@ -1,0 +1,20 @@
+---
+# vars file for jenkins
+_jenkins_configuration_directory:
+  default: /etc/default
+  Alpine: /etc/conf.d
+  CentOS: /etc/sysconfig
+  Fedora: /etc/sysconfig
+  openSUSE Leap: /etc/sysconfig
+  openSUSE tumbleweed: /etc/sysconfig
+
+jenkins_configuration_directory: "{{ _jenkins_configuration_directory[ansible_distribution] | default(_jenkins_configuration_directory['default']) }}"
+
+jenkins_yum_repository_baseurl: "https://pkg.jenkins.io/redhat/jenkins.repo"
+
+jenkins_rpm_key: "https://jenkins.io/redhat/jenkins.io.key"
+
+jenkins_apt_key_url: "https://pkg.jenkins.io/debian/jenkins.io.key"
+jenkins_apt_repository_repo: "deb http://pkg.jenkins.io/debian-stable binary/"
+
+jenkins_zypper_repository_repo: "https://pkg.jenkins.io/opensuse/"
