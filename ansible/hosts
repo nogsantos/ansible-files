@@ -1,8 +1,11 @@
 [wordpress]
-104.197.247.54
+[host-ip]
 
-[glcoud]
-35.199.72.22 ansible_user=nogsantos
+[tomcat]
+[host-ip] ansible_user=nogsantos
+
+[jenkins]
+[host-ip] ansible_user=nogsantos
 
 # To config the host with an user and a key
 # [host-ip] ansible_user=[user] ansible_ssh_private_key_file=[relative-path-to-the-key]
