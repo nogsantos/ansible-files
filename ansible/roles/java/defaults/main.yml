@@ -5,7 +5,7 @@
 java_vendor: openjdk
 
 # Set the variable to install the type, valid values are "jre" and "jdk".
-java_type: jre
+java_type: jdk
 
 # Set the version of java, valid values are "6", 7", "8" and "9".
 java_version: 8
