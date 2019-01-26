@@ -1,0 +1,19 @@
+---
+- name: Converge
+  hosts: glcoud
+  become: yes
+  gather_facts: no
+
+  vars:
+    tomcat_instances:
+      - name: "tomcat"
+        version: 9
+        shutdown_port: 8019
+        non_ssl_connector_port: 80
+        ssl_connector_port: 8447
+        ajp_port: 8013
+
+  roles:
+    - bootstrap
+    - java
+    - tomcat
