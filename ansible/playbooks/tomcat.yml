@@ -1,8 +1,8 @@
 ---
-- name: Converge
-  hosts: glcoud
+- name: Tomcat
+  hosts: tomcat
+  gather_facts: false
   become: yes
-  gather_facts: no
 
   vars:
     tomcat_instances:
